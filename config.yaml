@@ -1,18 +1,24 @@
-use_cuda: false
+use_cuda: true
 
 model_name: skipgram
 
+pre_trained_model_path: 
+pre_trained_vocab_path: 
+
+vocab_min_word_frequency: 3
+
 dataset: None
+dataset_size: -1
 data_dir: data/
-train_batch_size: 16
-val_batch_size: 16
+train_batch_size: 96
+val_batch_size: 96
 shuffle: True
 
 optimizer: Adam
 learning_rate: 0.025
-epochs: 16
+epochs: 64
 train_steps: -1
 val_steps: -1
 
 checkpoint_frequency: 4
-model_dir: models/skipgram_emotion_text
+model_dir: models/skipgram_emotion_text_direct
